@@ -6,8 +6,8 @@ namespace HotelService.Models
     {
         public string Id { get; set; }
         public DateTime RegistraionTime { get; set; }
-        public string OwnerFullName { get; set; }
-        public string OwnerPhoneNumber { get; set; }
+        public Owner OwnerInfo { get; set; }    
+        public string OwnerId { get; set; }
         public string PetName { get; set; }
         public FamilyPet FamilyPet { get; set; }
         public DateTime CheckInDate { get; set; }
