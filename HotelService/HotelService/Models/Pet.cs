@@ -6,11 +6,12 @@ namespace HotelService.Models
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public string OwnerFullName { get; set; }
-        public string OwnerPhoneNumber { get; set; }
+        public Owner OwnerInfo { get; set; }
+        public string OwnerId { get; set; }
         public FamilyPet FamilyPet { get; set; }
         public string Note { get; set; }
         public House House { get; set; }
         public string HouseId { get; set; }
+        public string Photo { get; set; }
     }
 }

@@ -12,7 +12,9 @@ namespace HotelService.Models
         public double SizeHeight { get; set; }
 
         public HouseStatus Status { get; set; }
-        
+
+        public string Photo { get; set; }
+
 
 
     }

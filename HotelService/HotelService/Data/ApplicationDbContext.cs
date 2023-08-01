@@ -11,7 +11,15 @@ namespace HotelService.Data
         public ApplicationDbContext(DbContextOptions options, IOptions<OperationalStoreOptions> operationalStoreOptions)
             : base(options, operationalStoreOptions)
         {
-
+            
         }
+
+        DbSet<Pet> Pets { get; set; }
+
+        DbSet<Order> Orders { get; set; }
+
+        DbSet<House> Houses { get; set; }
+
+        DbSet<Owner> Owners { get; set; }
     }
 }
