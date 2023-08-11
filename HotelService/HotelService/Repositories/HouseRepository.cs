@@ -20,11 +20,16 @@ namespace HotelService.Repositories
 
         }
 
-        public async Task<List<House>> GetAsync(int id)
+        public async Task<List<House>> GetAllAsync()
         {
             return await _context.Houses
                    .OrderByDescending(h => h.Number)
                    .ToListAsync();
+        }
+
+        public async Task<House> GetByIdAsync(string id)
+        {
+            return await _context.Houses.FindAsync(id);
         }
 
         public async Task UpdateAsync(House house)
@@ -37,5 +42,7 @@ namespace HotelService.Repositories
                 _context.Houses.Remove(house);
                 await _context.SaveChangesAsync();
          }
-        }
+
+        
+    }
 }

@@ -5,7 +5,8 @@ namespace HotelService.Interfaces
     public interface IHouseRepository
     {
         Task CreateAsync(House house);
-        Task<List<House>> GetAsync(int id);
+        Task<List<House>> GetAllAsync();
+        Task<House> GetByIdAsync(string id);
         Task UpdateAsync(House house);
         Task DeleteAsync(House house);
     }

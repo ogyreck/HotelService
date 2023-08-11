@@ -1,5 +1,7 @@
 using HotelService.Data;
+using HotelService.Interfaces;
 using HotelService.Models;
+using HotelService.Repositories;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -21,6 +23,8 @@ builder.Services.AddIdentityServer()
 
 builder.Services.AddAuthentication()
     .AddIdentityServerJwt();
+
+builder.Services.AddTransient<IHouseRepository, HouseRepository>();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
