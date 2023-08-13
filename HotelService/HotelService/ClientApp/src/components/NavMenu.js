@@ -3,6 +3,7 @@ import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from '
 import { Link } from 'react-router-dom';
 import { LoginMenu } from './api-authorization/LoginMenu';
 import './NavMenu.css';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -33,14 +34,14 @@ export class NavMenu extends Component {
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
-              </NavItem>
+                        
               <LoginMenu>
               </LoginMenu>
+              <NavItem>
+                    <NavDropdown title="Admin" >
+                        <NavLink tag={Link} className="text-dark" to="/create-new-house">Create New House</NavLink>
+                    </NavDropdown>
+              </NavItem>
             </ul>
           </Collapse>
         </Navbar>
