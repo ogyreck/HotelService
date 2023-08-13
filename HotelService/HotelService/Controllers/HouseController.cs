@@ -28,7 +28,7 @@ namespace HotelService.Controllers
         [HttpGet("{id}")]
         public async Task<House> GetHouse(string id)
         {
-            return await _houseRepository.GetByIdAsync
+            return await _houseRepository.GetByIdAsync(id);
         }
 
 
